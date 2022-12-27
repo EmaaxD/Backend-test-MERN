@@ -3,6 +3,7 @@ BACKEND TEST MERN
 proyecto hecho en: NodeJS, Express, MongoDB y Mongoose
 
 Rutas de la API
+
 allClientes: GET /api/clients,
 
 oneClientByID: GET /api/clients/:id,
