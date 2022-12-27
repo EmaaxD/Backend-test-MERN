@@ -1,8 +1,8 @@
 BACKEND TEST MERN
 
-proyecto hecho en: NodeJS,Express,MongoDB y Mongoose
+proyecto hecho en: NodeJS, Express, MongoDB y Mongoose
 
-Rutas {
+Rutas de la API
 allClientes: GET /api/clients,
 
 oneClientByID: GET /api/clients/:id,
@@ -20,7 +20,6 @@ cualquier campo se puede actualizar
 },
 
 deleteClient: DELETE /api/clients/:id
-}
 
 Todo empieza en el archivo 'server.js',
 
