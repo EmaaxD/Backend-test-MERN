@@ -4,7 +4,7 @@ proyecto hecho en: NodeJS, Express, MongoDB y Mongoose
 
 Rutas de la API
 
-allClientes: GET /api/clients,
+allClients: GET /api/clients,
 
 oneClientByID: GET /api/clients/:id,
 
