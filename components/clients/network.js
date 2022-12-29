@@ -58,6 +58,20 @@ router.put("/clients", async (req, res, next) => {
   }
 });
 
+// delete clients by [Id]
+router.post("/remove-clients", async (req, res, next) => {
+  const { body } = req;
+
+  try {
+    await Controller.removeClients(body.clients);
+    Response(req, res, 200, {
+      message: "Se eliminaron correctamente los clientes!",
+    });
+  } catch (error) {
+    Response(req, res, 400, { code: 400, message: error.message });
+  }
+});
+
 // delete client by ID
 router.delete("/clients/:id", async (req, res, next) => {
   const {

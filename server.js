@@ -12,7 +12,7 @@ const { host, port, allowedclient } = config;
 // init DB connect
 connectDB();
 
-app.use(cors({ origin: allowedclient, optionsSuccessStatus: 200 }));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

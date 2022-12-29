@@ -58,6 +58,17 @@ const updateClient = (id, data) =>
     }
   });
 
+const removeClients = (clients) =>
+  new Promise(async (resolve, reject) => {
+    try {
+      await Model.deleteMany({ _id: { $in: clients } });
+
+      resolve("deleted");
+    } catch (error) {
+      reject(error);
+    }
+  });
+
 const deleteClient = (id) =>
   new Promise(async (resolve, reject) => {
     try {
@@ -78,5 +89,6 @@ module.exports = {
   getClient,
   saveClient,
   updateClient,
+  removeClients,
   deleteClient,
 };

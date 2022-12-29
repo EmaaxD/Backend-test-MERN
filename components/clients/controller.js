@@ -45,6 +45,16 @@ const updateClient = (data) =>
     }
   });
 
+const removeClients = (clients) =>
+  new Promise(async (resolve, reject) => {
+    try {
+      const responseClients = await Store.removeClients(clients);
+      resolve(responseClients);
+    } catch (error) {
+      reject(error);
+    }
+  });
+
 const deleteClient = (id) =>
   new Promise(async (resolve, reject) => {
     try {
@@ -60,5 +70,6 @@ module.exports = {
   getClient,
   saveClient,
   updateClient,
+  removeClients,
   deleteClient,
 };
